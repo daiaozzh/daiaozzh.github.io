@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java面试题整理（一）, 岱玹">
+    <meta name="keywords" content="Maven的下载，安装，与配置整合idea, 岱玹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java面试题整理（一） | 岱玹</title>
+    <title>Maven的下载，安装，与配置整合idea | 岱玹</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java面试题整理（一）</h1>
+                    <h1 class="description center-align post-title">Maven的下载，安装，与配置整合idea</h1>
                 </div>
             </div>
         </div>
@@ -388,8 +388,12 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                <span class="chip bg-color">面试</span>
+                            <a href="/tags/maven/">
+                                <span class="chip bg-color">maven</span>
+                            </a>
+                        
+                            <a href="/tags/idea/">
+                                <span class="chip bg-color">idea</span>
                             </a>
                         
                     </div>
@@ -400,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%88%86%E4%BA%AB/" class="post-category">
-                                分享
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
                             </a>
                         
                     </div>
@@ -413,28 +417,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-18
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    805
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -450,76 +454,59 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JAVA-面试题整理（一）"><a href="#JAVA-面试题整理（一）" class="headerlink" title="JAVA 面试题整理（一）"></a>JAVA 面试题整理（一）</h2><p><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584521624&di=c6113eac35cace66d3746306e81719a6&src=http://www.hfxms.com.cn/UploadFiles/2018-07-23/15323296433591367.jpg" alt="img"></p>
-<p>整理一些常见面试题</p>
-<p>1.short s1=1,s1=s1+1;有错误吗？short s1=1;s1+=1,有错误吗？</p>
-<p>答：（1）错误，对于short s1=1,s1=s1+1,由于1是int类型，所以s1+1的运算结果也是int类型，需要强制转换类型才能赋值给short型。（2）正确，对于short s1=1;s1+=1;s1+=1相当于 s1=(short)(s1+1);其中包括了强制类型转换，所以可以编译 成功</p>
-<p>2.java有没有goto</p>
-<p>答：有保留关键字，但是用较少</p>
-<p>3.int和integer的区别</p>
-<p>答：int是基本数据类型，Integer是包装数据类型；拓展：Java为每一个原始类型提供了包装数据类型；（自动拆箱自动装箱）</p>
-<p>-原始数据类型：int,boolean,char,byte,short,double,float,long</p>
-<p>-包装数据类型：Boolean,Character,Byte,Short,Integer,Long,Float,Double</p>
-<p>4.&amp;和&amp;&amp;的区别</p>
-<p>答：&amp;是位运算，&amp;&amp;是逻辑 与</p>
-<p>5.解释内存中的栈（Stack）、堆（heap）、和静态区（static area）的用法</p>
-<p>答：栈 new 一个值，堆 定义一个值 静态区内存</p>
-<p>6.Math.round(11.5)等于多少？Math.round(-11.5)等于多少？</p>
-<p>答：12和-11，四舍五入的原理就是在参上加上0.5然后进行向下取整。</p>
-<p>7.swtich是否作用在byte上，是否作用在long上，是否作用在String上？</p>
-<p>答：long,byte不支持，string支持</p>
-<p>8.用最有效率的方法计算2乘以8？</p>
-<p>答：2&lt;&lt;3（左移三位表示乘以的2的3次方右移则表示除以2的3次方）</p>
-<p>9.数组有没有length（）方法？String有没有length()方法？</p>
-<p>答：数组没有length()方法但是有这个属性，String有这个方法</p>
-<p>10.在java中，如何跳出当前的多重嵌套循环</p>
-<p>答：break;</p>
-<p>11.构造器（constructor）是否可以被重写（override）</p>
-<p>答：不可以，构造器不能被继承，因此不能被重写，但可以重载</p>
-<p>12.两个对象值相同（x.equals(y)==true）,但却有不同的  hash code，这句话对不对？</p>
-<p>答：不对，当两个对象满足x.equals(y)==true，它们的哈希码应该是相同的；</p>
-<p>13.是否可以继承String类？</p>
-<p>答：String是final类，不可以被继承。</p>
-<p>14.String和StringBulider,StringBuffer的区别？</p>
-<p>答：JAVA平台提供两种类型的字符串，String和StringBulider、StringBuffer，它们都能储存、操作字符串，其中String只是只读字符串意味着不能被修改，而另外两个可以被修改</p>
-<p>15.重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</p>
-<p>答：（1）方法重载和重写都是实现多态的方式，区别在于重载是在编译时实现多态，重写是运行时候实现多态；（2）重写要求要求子类被重写方法与父类被重写方法有相同的返回类型，重载看参数类型和个数，不看返回类型；</p>
-<p>16.char型变量中能不能储存一个中文汉字，为什么？</p>
-<p>答：可以储存，char类型占2个字节，所以存放一个中文汉字没问题；</p>
-<p>17.抽象类（abstract class）和接口（interface）有什么异同？</p>
-<p>答:（1）抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用。（2）声明方法不同（3）字段属性访问权限不同，抽象类可以是各种访问，接口默认是public,static finalI;(4)</p>
-<p>18.静态嵌套类和内部类的不同？</p>
-<p>答：静态类不需要外部堆其进行实例化，内部类必须要外部对其实例化才能实例化</p>
-<p>19.GC是什么为什么要有GC？</p>
-<p>答：垃圾回收机制，防止系统崩溃，提高效率</p>
-<p>20.接口是否可以继承（extends）接口？抽象类是否可以实现（implements）接口？抽象类是否可以继承具体类（concrete class）?</p>
-<p>答：接口可以继承接口，而且支持多重继承。抽象类可以实现接口，抽象类可继承具体类也可以继承抽象类。</p>
-<p>21.java中的final关键字有哪些用法？</p>
-<p>答：修饰类：表示该类不能被继承，修饰方法：表示方法不能被重写。修饰变量：表示变量是常量</p>
-<p>22.Java语音如何进行异常处理，关键字：throws,throw,try,catch,finally分别如何使用？</p>
-<p>答：Java通过面向对象的方法进行异常处理，把不同的异常进行分类，并且提供了良好的接口。</p>
-<p>try:用来指定一块预防所有异常的程序；</p>
-<p>Throws：语句用来明确的抛出一个异常；</p>
-<p>catch:紧跟try块后面，用来指定你想要捕获的异常的类型</p>
-<p>Finally：为确保一段代码不管发生什么异常状况都要被执行</p>
-<p>23（*）.列一些你常见的运行时的异常？</p>
-<p>答：算数异常，类转换异常。非法参数异常，下标越界异常，空指针异常。安全异常；</p>
-<p>24（*）.阐述final，finaly,finalize的区别</p>
-<p>答：final修饰符，有三种修饰用法，finaly通常放在try…catch后面，处理异常用法，finalize是obeject中的方法，在垃圾回收对象钱要调用此方法进行操作；</p>
-<p>25.list,Set,Map是否继承自Conllection接口？</p>
-<p>答:list,set是的，Map不是；</p>
-<p>26（*）阐述ArryList,Vector,LinkenList的储存性能和特性。</p>
-<p>答：ArryList、Vector的底层是数组，Vector线程安全效率低下。LinkenList基于表链，相比ArryList增删块，查询慢；</p>
-<p>27.（*）Collection和Collections的区别？</p>
-<p>答：Collection是一个接口，它是Set,list等容器的父接口；Conllections是工具类，提供一系列的静态方法来辅助容器操作</p>
-<p>28.List,Map,Set三个接口存取元素时，各有什么特点？</p>
-<p>答：list能存放重复元素，Map保存键值对映射，映射关系科颜氏一对多或者是一对一，set不能存放相同元素；</p>
-<p>29.编写多线程程序有几种实现方法？</p>
-<p>答：一种是继承Thread类，另一中是实现Runnable接口</p>
-<p>30.Java中有几种类型的流</p>
-<p>答：字符流和字节流</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>今日暂时学习了解这些面试题目</p>
-<p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2541258383,2247312097&fm=26&gp=0.jpg" alt="img"></p>
+                <h2 id="Maven的下载，安装，与配置整合idea"><a href="#Maven的下载，安装，与配置整合idea" class="headerlink" title="Maven的下载，安装，与配置整合idea"></a>Maven的下载，安装，与配置整合idea</h2><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/AgzNyarvW8cM.png?imageslim" alt="mark"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Apache Maven是一个软件项目管理和综合工具。基于项目对象模型（POM）的概念，<a href="http://www.yiibai.com/maven" target="_blank" rel="noopener">Maven</a>可以从一个中心资料片管理项目构建，报告和文件。本教程将介绍如何使用Maven在Java开发，或任何其他的编程语言的任何项目。</p>
+<h3 id="一-Maven是什么"><a href="#一-Maven是什么" class="headerlink" title="一 Maven是什么"></a>一 Maven是什么</h3><p>Maven是一个项目管理和综合工具。<a href="http://www.yiibai.com/maven" target="_blank" rel="noopener">Maven</a>提供了开发人员构建一个完整的生命周期框架。开发团队可以自动完成项目的基础工具建设，Maven使用标准的目录结构和默认构建生命周期。</p>
+<p>​    在多个开发团队环境时，Maven可以设置按标准在非常短的时间里完成配置工作。由于大部分项目的设置都很简单，并且可重复使用，Maven让开发人员的工作更轻松，同时创建报表，检查，构建和测试自动化设置。</p>
+<p>​    Maven提供了开发人员的方式来管理：</p>
+<ul>
+<li>​            Builds     </li>
+<li>​            Documentation     </li>
+<li>​            Reporting     </li>
+<li>​            Dependencies     </li>
+<li>​            SCMs     </li>
+<li>​            Releases     </li>
+<li>​            Distribution     </li>
+<li>​            mailing list     </li>
+</ul>
+<p>​    概括地说，Maven简化和标准化项目建设过程。处理编译，分配，文档，团队协作和其他任务的无缝连接。 Maven增加可重用性并负责建立相关的任务。</p>
+<h3 id="二-Maven的安装与配置"><a href="#二-Maven的安装与配置" class="headerlink" title="二 Maven的安装与配置"></a>二 Maven的安装与配置</h3><p>Maven下载</p>
+<p>下载地址：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/7AT7DkyeLwjn.png?imageslim" alt="mark"></p>
+<p>下载后，解压得到</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/4ikkEvsRIR7E.png?imageslim" alt="mark"></p>
+<p>Maven目录分析：</p>
+<p>bin文件夹：含有mvn运行的脚本</p>
+<p>boot文件夹：含有plexus-吃辣爽死我rlds类加载器框架</p>
+<p>conf文件夹：含有settings.xml配置文件</p>
+<p>lib文件夹：含有maven运行时所需要的java类库</p>
+<p>maven安装</p>
+<p>1.确认电脑上已经安装了JDK</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/1FDB2BziaAvA.png?imageslim" alt="mark"></p>
+<p>2.环境变量的配置</p>
+<p>（1）新建环境变量MAVEN_HOME</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/le5anzdq47hW.png?imageslim" alt="mark"></p>
+<p>（2）设置环境变量Path</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/fbUcCt1JFnVn.png?imageslim" alt="mark"></p>
+<p>编辑Path，增加“%MAVEN_HOME%\bin”</p>
+<p>（3）新建环境变量MAVEN_OPTS</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/UD7La4wuSitK.png?imageslim" alt="mark"></p>
+<p>通常需要设置MAVEN_OPTS的值为-Xms128m -Xmx512m，因为Java默认的最大可用内存往往不能够满足Maven运行的需要，比如在项目较大时，使用Maven生成项目站点需要占用大量的内存，如果没有该配置，则很容易得到java.lang.OutOfMemeoryError。</p>
+<p>3.验证MAVEN安装成功</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/1OwNH5P6Gk5C.png?imageslim" alt="mark"></p>
+<h3 id="三-maven设置本地仓库及其阿里云"><a href="#三-maven设置本地仓库及其阿里云" class="headerlink" title="三  maven设置本地仓库及其阿里云"></a>三  maven设置本地仓库及其阿里云</h3><p>1.在刚才MAVEN解压完成的地方，新建一个文件夹 repository（也可以叫别的，比如：rep）该目录用作MAVEN的本地库。</p>
+<p>2.找到setting.xml文件。E:\maven\apache-maven\conf\settings.xml<br>查找一下代码：（可以直接复制，然后ctrl+F—&gt;ctrl+V直接查询）</p>
+<pre><code class="java">&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code></pre>
+<p>3.将MAVEN镜像路径为阿里镜像，以便下载速度快，每更新一次镜像地址，都会重新下载一次包（这一步可以不用设置，可以忽略）<br>还是在setting.xml文件中<br>查找一下代码：（可以直接复制，然后ctrl+F—&gt;ctrl+V直接查询）</p>
+<pre><code class="java">    &lt;mirror&gt;
+      &lt;id&gt;alimaven&lt;/id&gt;
+      &lt;name&gt;aliyun maven&lt;/name&gt;
+      &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+      &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;        
+    &lt;/mirror&gt;</code></pre>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/Tos6jRJ44mgu.png?imageslim" alt="mark"></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/lM5TDBlCujq6.png?imageslim" alt="mark"></p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>以上就是maven的安装，配置及其整合idea的使用方法</p>
 
             </div>
             <hr/>
@@ -545,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dablog.club/2020/03/18/javamianshi1/">https://dablog.club/2020/03/18/javamianshi1/</a>
+                    <a href="https://dablog.club/2020/04/09/mavenaz/">https://dablog.club/2020/04/09/mavenaz/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,8 +574,12 @@
                                     <span class="chip bg-color">java</span>
                                 </a>
                             
-                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                    <span class="chip bg-color">面试</span>
+                                <a href="/tags/maven/">
+                                    <span class="chip bg-color">maven</span>
+                                </a>
+                            
+                                <a href="/tags/idea/">
+                                    <span class="chip bg-color">idea</span>
                                 </a>
                             
                         </div>
@@ -776,49 +767,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/24/bloggenx/">
+                <a href="/2020/04/09/mavenaz/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/6.jpg" class="responsive-img" alt="博客优化">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Maven的下载，安装，与配置整合idea">
                         
-                        <span class="card-title">博客优化</span>
+                        <span class="card-title">Maven的下载，安装，与配置整合idea</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            博客的优化
+                            maven的安装与配置
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%88%86%E4%BA%AB/" class="post-category">
-                                    分享
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/maven/">
+                        <span class="chip bg-color">maven</span>
+                    </a>
+                    
+                    <a href="/tags/idea/">
+                        <span class="chip bg-color">idea</span>
                     </a>
                     
                 </div>
@@ -832,30 +829,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/17/docker/">
+                <a href="/2020/04/09/javahjbl/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="Docker">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="java环境变量的安装">
                         
-                        <span class="card-title">Docker</span>
+                        <span class="card-title">java环境变量的安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker的简介 及其简单使用方法
+                            安装java环境变量
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                    开发
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
                                 </a>
                             
                             
@@ -865,8 +862,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Docker/">
-                        <span class="chip bg-color">Docker</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%89%E8%A3%85/">
+                        <span class="chip bg-color">安装</span>
                     </a>
                     
                 </div>

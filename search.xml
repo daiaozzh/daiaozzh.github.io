@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>Maven的下载，安装，与配置整合idea</title>
+      <link href="/2020/04/09/mavenaz/"/>
+      <url>/2020/04/09/mavenaz/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Maven的下载，安装，与配置整合idea"><a href="#Maven的下载，安装，与配置整合idea" class="headerlink" title="Maven的下载，安装，与配置整合idea"></a>Maven的下载，安装，与配置整合idea</h2><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/AgzNyarvW8cM.png?imageslim" alt="mark"></p><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Apache Maven是一个软件项目管理和综合工具。基于项目对象模型（POM）的概念，<a href="http://www.yiibai.com/maven" target="_blank" rel="noopener">Maven</a>可以从一个中心资料片管理项目构建，报告和文件。本教程将介绍如何使用Maven在Java开发，或任何其他的编程语言的任何项目。</p><h3 id="一-Maven是什么"><a href="#一-Maven是什么" class="headerlink" title="一 Maven是什么"></a>一 Maven是什么</h3><p>Maven是一个项目管理和综合工具。<a href="http://www.yiibai.com/maven" target="_blank" rel="noopener">Maven</a>提供了开发人员构建一个完整的生命周期框架。开发团队可以自动完成项目的基础工具建设，Maven使用标准的目录结构和默认构建生命周期。</p><p>​    在多个开发团队环境时，Maven可以设置按标准在非常短的时间里完成配置工作。由于大部分项目的设置都很简单，并且可重复使用，Maven让开发人员的工作更轻松，同时创建报表，检查，构建和测试自动化设置。</p><p>​    Maven提供了开发人员的方式来管理：</p><ul><li>​            Builds     </li><li>​            Documentation     </li><li>​            Reporting     </li><li>​            Dependencies     </li><li>​            SCMs     </li><li>​            Releases     </li><li>​            Distribution     </li><li>​            mailing list     </li></ul><p>​    概括地说，Maven简化和标准化项目建设过程。处理编译，分配，文档，团队协作和其他任务的无缝连接。 Maven增加可重用性并负责建立相关的任务。</p><h3 id="二-Maven的安装与配置"><a href="#二-Maven的安装与配置" class="headerlink" title="二 Maven的安装与配置"></a>二 Maven的安装与配置</h3><p>Maven下载</p><p>下载地址：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/7AT7DkyeLwjn.png?imageslim" alt="mark"></p><p>下载后，解压得到</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/4ikkEvsRIR7E.png?imageslim" alt="mark"></p><p>Maven目录分析：</p><p>bin文件夹：含有mvn运行的脚本</p><p>boot文件夹：含有plexus-吃辣爽死我rlds类加载器框架</p><p>conf文件夹：含有settings.xml配置文件</p><p>lib文件夹：含有maven运行时所需要的java类库</p><p>maven安装</p><p>1.确认电脑上已经安装了JDK</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/1FDB2BziaAvA.png?imageslim" alt="mark"></p><p>2.环境变量的配置</p><p>（1）新建环境变量MAVEN_HOME</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/le5anzdq47hW.png?imageslim" alt="mark"></p><p>（2）设置环境变量Path</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/fbUcCt1JFnVn.png?imageslim" alt="mark"></p><p>编辑Path，增加“%MAVEN_HOME%\bin”</p><p>（3）新建环境变量MAVEN_OPTS</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/UD7La4wuSitK.png?imageslim" alt="mark"></p><p>通常需要设置MAVEN_OPTS的值为-Xms128m -Xmx512m，因为Java默认的最大可用内存往往不能够满足Maven运行的需要，比如在项目较大时，使用Maven生成项目站点需要占用大量的内存，如果没有该配置，则很容易得到java.lang.OutOfMemeoryError。</p><p>3.验证MAVEN安装成功</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/1OwNH5P6Gk5C.png?imageslim" alt="mark"></p><h3 id="三-maven设置本地仓库及其阿里云"><a href="#三-maven设置本地仓库及其阿里云" class="headerlink" title="三  maven设置本地仓库及其阿里云"></a>三  maven设置本地仓库及其阿里云</h3><p>1.在刚才MAVEN解压完成的地方，新建一个文件夹 repository（也可以叫别的，比如：rep）该目录用作MAVEN的本地库。</p><p>2.找到setting.xml文件。E:\maven\apache-maven\conf\settings.xml<br>查找一下代码：（可以直接复制，然后ctrl+F—&gt;ctrl+V直接查询）</p><pre><code class="java">&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code></pre><p>3.将MAVEN镜像路径为阿里镜像，以便下载速度快，每更新一次镜像地址，都会重新下载一次包（这一步可以不用设置，可以忽略）<br>还是在setting.xml文件中<br>查找一下代码：（可以直接复制，然后ctrl+F—&gt;ctrl+V直接查询）</p><pre><code class="java">    &lt;mirror&gt;      &lt;id&gt;alimaven&lt;/id&gt;      &lt;name&gt;aliyun maven&lt;/name&gt;      &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;      &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;            &lt;/mirror&gt;</code></pre><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/Tos6jRJ44mgu.png?imageslim" alt="mark"></p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/lM5TDBlCujq6.png?imageslim" alt="mark"></p><h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>以上就是maven的安装，配置及其整合idea的使用方法</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> maven </tag>
+            
+            <tag> idea </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java环境变量的安装</title>
+      <link href="/2020/04/09/javahjbl/"/>
+      <url>/2020/04/09/javahjbl/</url>
+      
+        <content type="html"><![CDATA[<h2 id="java环境变量的配置"><a href="#java环境变量的配置" class="headerlink" title="java环境变量的配置"></a>java环境变量的配置</h2><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/nllXobWLu9Kz.png?imageslim" alt="mark"></p><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>貌似很久没有更新自己的博客了，最近的学习貌似有点偷懒这样下去可不行，只从上次电脑重装系统之后什么都没有有了，今天打算全部重装一遍吧正好练练手，先从最简单安装环境变量开始吧，毕竟环境变量是开始java开发的基础，也是对自己一些知识的积累吧；</p><h4 id="一-下载jdk"><a href="#一-下载jdk" class="headerlink" title="一 下载jdk"></a>一 下载jdk</h4><p>1.一般是去官网下载自己电脑型号相对应的版本下载</p><p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p><p>2.幸好重装系统只是重装C盘 以前的jdk版本还没有删除（手动滑稽）</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/MI1VutFmpFOC.png?imageslim" alt="mark"></p><h4 id="二-安装jdk"><a href="#二-安装jdk" class="headerlink" title="二 安装jdk"></a>二 安装jdk</h4><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/6OGI7QfxXYT3.png?imageslim" alt="mark"></p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/Rmv2DY2rwW9T.png?imageslim" alt="mark"></p><p>这里 要注意你安装的地方你要记住，个人建议不要安装在C盘</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/MPh9waKejQEa.png?imageslim" alt="mark"></p><p>然后就是等待</p><h4 id="三-配置环境变量"><a href="#三-配置环境变量" class="headerlink" title="三 配置环境变量"></a>三 配置环境变量</h4><p>a、新建 JAVA_HOME 环境变量，JAVA_HOME=C:\Java\jdk1.8.0_144</p><p>b、修改 path 环境变量，在path变量尾部添加%JAVA_HOME%\bin</p><p>1，“计算机” -&gt; 右键 -&gt; 属性 打开》环境变量</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/OmuWDzXqipsS.png?imageslim" alt="mark"></p><p>2，添加环境变量</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/9eG9I3zRoQJj.png?imageslim" alt="mark"></p><p>找到 path 变量，点击“编辑”</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/zYC8mBlpelHK.png?imageslim" alt="mark"></p><h4 id="四-验证环境变量"><a href="#四-验证环境变量" class="headerlink" title="四 验证环境变量"></a>四 验证环境变量</h4><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/5UOuEzMyCcIO.png?imageslim" alt="mark"></p><p>出现以下就是安装成功了</p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/NfsJ0xWE5gTe.png?imageslim" alt="mark"></p><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/72tujtEgfyhu.png?imageslim" alt="mark"></p><h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>以上就是jdk的所有安装教程了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 安装 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>黑苹果安装教程</title>
       <link href="/2020/03/24/hpgfx/"/>
       <url>/2020/03/24/hpgfx/</url>

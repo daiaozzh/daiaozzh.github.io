@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java面试题整理（一）, 岱玹">
+    <meta name="keywords" content="java环境变量的安装, 岱玹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java面试题整理（一） | 岱玹</title>
+    <title>java环境变量的安装 | 岱玹</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java面试题整理（一）</h1>
+                    <h1 class="description center-align post-title">java环境变量的安装</h1>
                 </div>
             </div>
         </div>
@@ -388,8 +388,8 @@
                                 <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                <span class="chip bg-color">面试</span>
+                            <a href="/tags/%E5%AE%89%E8%A3%85/">
+                                <span class="chip bg-color">安装</span>
                             </a>
                         
                     </div>
@@ -400,8 +400,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%88%86%E4%BA%AB/" class="post-category">
-                                分享
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
                             </a>
                         
                     </div>
@@ -413,28 +413,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-18
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    325
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -450,76 +450,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JAVA-面试题整理（一）"><a href="#JAVA-面试题整理（一）" class="headerlink" title="JAVA 面试题整理（一）"></a>JAVA 面试题整理（一）</h2><p><img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1584521624&di=c6113eac35cace66d3746306e81719a6&src=http://www.hfxms.com.cn/UploadFiles/2018-07-23/15323296433591367.jpg" alt="img"></p>
-<p>整理一些常见面试题</p>
-<p>1.short s1=1,s1=s1+1;有错误吗？short s1=1;s1+=1,有错误吗？</p>
-<p>答：（1）错误，对于short s1=1,s1=s1+1,由于1是int类型，所以s1+1的运算结果也是int类型，需要强制转换类型才能赋值给short型。（2）正确，对于short s1=1;s1+=1;s1+=1相当于 s1=(short)(s1+1);其中包括了强制类型转换，所以可以编译 成功</p>
-<p>2.java有没有goto</p>
-<p>答：有保留关键字，但是用较少</p>
-<p>3.int和integer的区别</p>
-<p>答：int是基本数据类型，Integer是包装数据类型；拓展：Java为每一个原始类型提供了包装数据类型；（自动拆箱自动装箱）</p>
-<p>-原始数据类型：int,boolean,char,byte,short,double,float,long</p>
-<p>-包装数据类型：Boolean,Character,Byte,Short,Integer,Long,Float,Double</p>
-<p>4.&amp;和&amp;&amp;的区别</p>
-<p>答：&amp;是位运算，&amp;&amp;是逻辑 与</p>
-<p>5.解释内存中的栈（Stack）、堆（heap）、和静态区（static area）的用法</p>
-<p>答：栈 new 一个值，堆 定义一个值 静态区内存</p>
-<p>6.Math.round(11.5)等于多少？Math.round(-11.5)等于多少？</p>
-<p>答：12和-11，四舍五入的原理就是在参上加上0.5然后进行向下取整。</p>
-<p>7.swtich是否作用在byte上，是否作用在long上，是否作用在String上？</p>
-<p>答：long,byte不支持，string支持</p>
-<p>8.用最有效率的方法计算2乘以8？</p>
-<p>答：2&lt;&lt;3（左移三位表示乘以的2的3次方右移则表示除以2的3次方）</p>
-<p>9.数组有没有length（）方法？String有没有length()方法？</p>
-<p>答：数组没有length()方法但是有这个属性，String有这个方法</p>
-<p>10.在java中，如何跳出当前的多重嵌套循环</p>
-<p>答：break;</p>
-<p>11.构造器（constructor）是否可以被重写（override）</p>
-<p>答：不可以，构造器不能被继承，因此不能被重写，但可以重载</p>
-<p>12.两个对象值相同（x.equals(y)==true）,但却有不同的  hash code，这句话对不对？</p>
-<p>答：不对，当两个对象满足x.equals(y)==true，它们的哈希码应该是相同的；</p>
-<p>13.是否可以继承String类？</p>
-<p>答：String是final类，不可以被继承。</p>
-<p>14.String和StringBulider,StringBuffer的区别？</p>
-<p>答：JAVA平台提供两种类型的字符串，String和StringBulider、StringBuffer，它们都能储存、操作字符串，其中String只是只读字符串意味着不能被修改，而另外两个可以被修改</p>
-<p>15.重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</p>
-<p>答：（1）方法重载和重写都是实现多态的方式，区别在于重载是在编译时实现多态，重写是运行时候实现多态；（2）重写要求要求子类被重写方法与父类被重写方法有相同的返回类型，重载看参数类型和个数，不看返回类型；</p>
-<p>16.char型变量中能不能储存一个中文汉字，为什么？</p>
-<p>答：可以储存，char类型占2个字节，所以存放一个中文汉字没问题；</p>
-<p>17.抽象类（abstract class）和接口（interface）有什么异同？</p>
-<p>答:（1）抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用。（2）声明方法不同（3）字段属性访问权限不同，抽象类可以是各种访问，接口默认是public,static finalI;(4)</p>
-<p>18.静态嵌套类和内部类的不同？</p>
-<p>答：静态类不需要外部堆其进行实例化，内部类必须要外部对其实例化才能实例化</p>
-<p>19.GC是什么为什么要有GC？</p>
-<p>答：垃圾回收机制，防止系统崩溃，提高效率</p>
-<p>20.接口是否可以继承（extends）接口？抽象类是否可以实现（implements）接口？抽象类是否可以继承具体类（concrete class）?</p>
-<p>答：接口可以继承接口，而且支持多重继承。抽象类可以实现接口，抽象类可继承具体类也可以继承抽象类。</p>
-<p>21.java中的final关键字有哪些用法？</p>
-<p>答：修饰类：表示该类不能被继承，修饰方法：表示方法不能被重写。修饰变量：表示变量是常量</p>
-<p>22.Java语音如何进行异常处理，关键字：throws,throw,try,catch,finally分别如何使用？</p>
-<p>答：Java通过面向对象的方法进行异常处理，把不同的异常进行分类，并且提供了良好的接口。</p>
-<p>try:用来指定一块预防所有异常的程序；</p>
-<p>Throws：语句用来明确的抛出一个异常；</p>
-<p>catch:紧跟try块后面，用来指定你想要捕获的异常的类型</p>
-<p>Finally：为确保一段代码不管发生什么异常状况都要被执行</p>
-<p>23（*）.列一些你常见的运行时的异常？</p>
-<p>答：算数异常，类转换异常。非法参数异常，下标越界异常，空指针异常。安全异常；</p>
-<p>24（*）.阐述final，finaly,finalize的区别</p>
-<p>答：final修饰符，有三种修饰用法，finaly通常放在try…catch后面，处理异常用法，finalize是obeject中的方法，在垃圾回收对象钱要调用此方法进行操作；</p>
-<p>25.list,Set,Map是否继承自Conllection接口？</p>
-<p>答:list,set是的，Map不是；</p>
-<p>26（*）阐述ArryList,Vector,LinkenList的储存性能和特性。</p>
-<p>答：ArryList、Vector的底层是数组，Vector线程安全效率低下。LinkenList基于表链，相比ArryList增删块，查询慢；</p>
-<p>27.（*）Collection和Collections的区别？</p>
-<p>答：Collection是一个接口，它是Set,list等容器的父接口；Conllections是工具类，提供一系列的静态方法来辅助容器操作</p>
-<p>28.List,Map,Set三个接口存取元素时，各有什么特点？</p>
-<p>答：list能存放重复元素，Map保存键值对映射，映射关系科颜氏一对多或者是一对一，set不能存放相同元素；</p>
-<p>29.编写多线程程序有几种实现方法？</p>
-<p>答：一种是继承Thread类，另一中是实现Runnable接口</p>
-<p>30.Java中有几种类型的流</p>
-<p>答：字符流和字节流</p>
-<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>今日暂时学习了解这些面试题目</p>
-<p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2541258383,2247312097&fm=26&gp=0.jpg" alt="img"></p>
+                <h2 id="java环境变量的配置"><a href="#java环境变量的配置" class="headerlink" title="java环境变量的配置"></a>java环境变量的配置</h2><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/nllXobWLu9Kz.png?imageslim" alt="mark"></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>貌似很久没有更新自己的博客了，最近的学习貌似有点偷懒这样下去可不行，只从上次电脑重装系统之后什么都没有有了，今天打算全部重装一遍吧正好练练手，先从最简单安装环境变量开始吧，毕竟环境变量是开始java开发的基础，也是对自己一些知识的积累吧；</p>
+<h4 id="一-下载jdk"><a href="#一-下载jdk" class="headerlink" title="一 下载jdk"></a>一 下载jdk</h4><p>1.一般是去官网下载自己电脑型号相对应的版本下载</p>
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+<p>2.幸好重装系统只是重装C盘 以前的jdk版本还没有删除（手动滑稽）</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/MI1VutFmpFOC.png?imageslim" alt="mark"></p>
+<h4 id="二-安装jdk"><a href="#二-安装jdk" class="headerlink" title="二 安装jdk"></a>二 安装jdk</h4><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/6OGI7QfxXYT3.png?imageslim" alt="mark"></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/Rmv2DY2rwW9T.png?imageslim" alt="mark"></p>
+<p>这里 要注意你安装的地方你要记住，个人建议不要安装在C盘</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/MPh9waKejQEa.png?imageslim" alt="mark"></p>
+<p>然后就是等待</p>
+<h4 id="三-配置环境变量"><a href="#三-配置环境变量" class="headerlink" title="三 配置环境变量"></a>三 配置环境变量</h4><p>a、新建 JAVA_HOME 环境变量，JAVA_HOME=C:\Java\jdk1.8.0_144</p>
+<p>b、修改 path 环境变量，在path变量尾部添加%JAVA_HOME%\bin</p>
+<p>1，“计算机” -&gt; 右键 -&gt; 属性 打开》环境变量</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/OmuWDzXqipsS.png?imageslim" alt="mark"></p>
+<p>2，添加环境变量</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/9eG9I3zRoQJj.png?imageslim" alt="mark"></p>
+<p>找到 path 变量，点击“编辑”</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/zYC8mBlpelHK.png?imageslim" alt="mark"></p>
+<h4 id="四-验证环境变量"><a href="#四-验证环境变量" class="headerlink" title="四 验证环境变量"></a>四 验证环境变量</h4><p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/5UOuEzMyCcIO.png?imageslim" alt="mark"></p>
+<p>出现以下就是安装成功了</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/NfsJ0xWE5gTe.png?imageslim" alt="mark"></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200408/72tujtEgfyhu.png?imageslim" alt="mark"></p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>以上就是jdk的所有安装教程了</p>
 
             </div>
             <hr/>
@@ -545,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dablog.club/2020/03/18/javamianshi1/">https://dablog.club/2020/03/18/javamianshi1/</a>
+                    <a href="https://dablog.club/2020/04/09/javahjbl/">https://dablog.club/2020/04/09/javahjbl/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,8 +541,8 @@
                                     <span class="chip bg-color">java</span>
                                 </a>
                             
-                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
-                                    <span class="chip bg-color">面试</span>
+                                <a href="/tags/%E5%AE%89%E8%A3%85/">
+                                    <span class="chip bg-color">安装</span>
                                 </a>
                             
                         </div>
@@ -780,24 +734,80 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/24/bloggenx/">
+                <a href="/2020/04/09/mavenaz/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/6.jpg" class="responsive-img" alt="博客优化">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Maven的下载，安装，与配置整合idea">
                         
-                        <span class="card-title">博客优化</span>
+                        <span class="card-title">Maven的下载，安装，与配置整合idea</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            博客的优化
+                            maven的安装与配置
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/maven/">
+                        <span class="chip bg-color">maven</span>
+                    </a>
+                    
+                    <a href="/tags/idea/">
+                        <span class="chip bg-color">idea</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/24/hpgfx/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="黑苹果安装教程">
+                        
+                        <span class="card-title">黑苹果安装教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            黑苹果的安装
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -813,60 +823,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
+                        <span class="chip bg-color">黑苹果</span>
                     </a>
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/17/docker/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="Docker">
-                        
-                        <span class="card-title">Docker</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Docker的简介 及其简单使用方法
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
-                                    开发
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Docker/">
-                        <span class="chip bg-color">Docker</span>
+                    <a href="/tags/win10/">
+                        <span class="chip bg-color">win10</span>
                     </a>
                     
                 </div>
