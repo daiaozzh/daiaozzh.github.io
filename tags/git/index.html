@@ -291,7 +291,8 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
 
 
@@ -338,20 +339,29 @@
                 </a>
                 
                 
-                <a href="/tags/hexo/" title="hexo: 2">
+                <a href="/tags/java/" title="java: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="hexo" style="background-color: #E8F8F5;">hexo
-                        <span class="tag-length">2</span>
+                            data-tagname="java" style="background-color: #E8F8F5;">java
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/blog/" title="blog: 1">
+                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="blog" style="background-color: #FEF9E7;">blog
+                            data-tagname="面试" style="background-color: #FEF9E7;">面试
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/hexo/" title="hexo: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="hexo" style="background-color: #F8F9F9;">hexo
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -359,7 +369,7 @@
                 <a href="/tags/git/" title="git: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="git" style="background-color: #F8F9F9;">git
+                            data-tagname="git" style="background-color: #82E0AA;">git
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -368,7 +378,16 @@
                 <a href="/tags/Node-js/" title="Node.js: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Node.js" style="background-color: #82E0AA;">Node.js
+                            data-tagname="Node.js" style="background-color: #D7BDE2;">Node.js
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/blog/" title="blog: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="blog" style="background-color: #A3E4D7;">blog
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -377,7 +396,7 @@
                 <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="微服务: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="微服务" style="background-color: #D7BDE2;">微服务
+                            data-tagname="微服务" style="background-color: #85C1E9;">微服务
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -386,34 +405,7 @@
                 <a href="/tags/springboot/" title="springboot: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="springboot" style="background-color: #A3E4D7;">springboot
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/java/" title="java: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="java" style="background-color: #85C1E9;">java
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%AE%89%E8%A3%85/" title="安装: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="安装" style="background-color: #F8C471;">安装
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面试" style="background-color: #F9E79F;">面试
+                            data-tagname="springboot" style="background-color: #F8C471;">springboot
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -422,7 +414,7 @@
                 <a href="/tags/maven/" title="maven: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="maven" style="background-color: #FEF9E7;">maven
+                            data-tagname="maven" style="background-color: #F9E79F;">maven
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -432,6 +424,15 @@
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="idea" style="background-color: #E8F8F5;">idea
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%AE%89%E8%A3%85/" title="安装: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="安装" style="background-color: #F9EBEA;">安装
                         <span class="tag-length">1</span>
                     </span>
                 </a>
