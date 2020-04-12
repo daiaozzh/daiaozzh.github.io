@@ -1,0 +1,1989 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="黑马商城环境搭建, 岱玹">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>黑马商城环境搭建 | 岱玹</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">岱玹</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">岱玹</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">黑马商城环境搭建</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                <span class="chip bg-color">微服务</span>
+                            </a>
+                        
+                            <a href="/tags/springboot/">
+                                <span class="chip bg-color">springboot</span>
+                            </a>
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-04-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-04-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    24 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="黑马商城环境搭建"><a href="#黑马商城环境搭建" class="headerlink" title="黑马商城环境搭建"></a>黑马商城环境搭建</h2><p>最近准备写的新项目，是黑马的一个商城案例，然后前几天也在捣鼓然后遇到了一个问题就准备放弃了，今晚想起不能就这么放弃，所以打算重新开始毕竟万事开头难，也希望自己早日写完这个项目，也从中学习到很多知识。</p>
+<h3 id="一-项目介绍"><a href="#一-项目介绍" class="headerlink" title="一 项目介绍"></a>一 项目介绍</h3><p>1 页面介绍</p>
+<p>网站前台静态原型演示，打开<code>资料\页面\前台\project-changgou-portal-fis3-master</code>，首页<code>index.html</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20200218111706977.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3F6YzIwMTc=,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>网站管理后台静态原型演示:<a href="http://czpm.itcast.cn/青橙后台/#g=1&amp;p=后台首页" target="_blank" rel="noopener">http://czpm.itcast.cn/青橙后台/#g=1&amp;p=后台首页</a></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/M7jjIs0YVgBW.png?imageslim" alt="mark"></p>
+<ol start="2">
+<li><p>技术架构</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/Adn5Dz9pnACd.png?imageslim" alt="mark"></p>
+</li>
+</ol>
+<p>3.系统架构图</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/UgtwA23QBXD7.png?imageslim" alt="mark"></p>
+<h3 id="二-环境搭建"><a href="#二-环境搭建" class="headerlink" title="二 环境搭建"></a>二 环境搭建</h3><p>1.虚拟机环境搭建</p>
+<p>（1）VMware Workstation Pro安装centos7 镜像</p>
+<p>（2）安装docker</p>
+<p>（3）拉取mySQL镜像，并创建容器</p>
+<p>（4）客户端连接mysql容器，建库建表（建库建表语句在资源文件夹中提供）</p>
+<p>虚拟机数据：</p>
+<ul>
+<li>虚拟机IP:192.168.211.132</li>
+<li>虚拟机账号：root 密码：123456</li>
+<li>数据库端口:3306</li>
+<li>数据库账号：root 密码：123456</li>
+</ul>
+<p>数据库脚本：<code>资料\数据库脚本</code></p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/U1QXaBjzFDnk.png?imageslim" alt="mark"></p>
+<p>这里分享一个 遇到一个踩坑小经历，就是下载下来的虚拟机会连接不上ssh工具和navicat这里我找了很多博客，终于找到一个靠谱的<a href="https://blog.csdn.net/qq_45455361/article/details/104316395" target="_blank" rel="noopener">https://blog.csdn.net/qq_45455361/article/details/104316395</a></p>
+<p>我也简单补充一下这篇博客的内容</p>
+<p>资料：云盘连接 提取码：sb1m</p>
+<p>拿到资料后，把里面虚拟机进行解压，然后用VMware虚拟机软件打开Centos-changgou.vmx，<br>然后打开，用户名:root,密码：123456。<br>里面后期用到的环境都已经安装好了，不需要我们浪费时间搭建环境。<br>接下来需要打开VMware-编辑-虚拟网络配置 打开NAT设置</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/YrQffQPle5iJ.png?imageslim" alt="mark"></p>
+<p>然后点击NAT设置，修改IP</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/pjBTLiVqlKJV.png?imageslim" alt="mark"></p>
+<p>接下来在CentOS终端中输入 vi /etc/sysconfig/network-scripts/ifcfg-ens33</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/ItwvGNCbimTv.png?imageslim" alt="mark"></p>
+<p>注意这里的 dsn1设置自己的子网ip+1，ip设置192.168.xx.xx，倒数第二个xx要和本地的网关倒数第二个设置一样，网关也要设置的一样不然就会连不上，设置好之后，虚拟机就设置成功了<img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/wF62VB8IqWwn.png?imageslim" alt="mark"></p>
+<p>这就是设置成功之后连上数据库，虚拟机的环境搭建就到这里了</p>
+<h3 id="三-父工程搭建"><a href="#三-父工程搭建" class="headerlink" title="三 父工程搭建"></a>三 父工程搭建</h3><p>创建父工程 changgou-parent  ,pom.xml文件中增加配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+    &lt;artifactId&gt;changgou-parent&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.1.4.RELEASE&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;properties&gt;
+        &lt;skipTests&gt;true&lt;/skipTests&gt;
+    &lt;/properties&gt;
+
+    &lt;!--依赖包--&gt;
+    &lt;dependencies&gt;
+        &lt;!--测试包--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!--fastjson--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+            &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+            &lt;version&gt;1.2.51&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!--swagger文档--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+            &lt;version&gt;2.6.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+            &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+            &lt;version&gt;2.6.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!--
+            http://localhost:9011/swagger-ui.html
+        --&gt;
+    &lt;/dependencies&gt;
+
+    &lt;dependencyManagement&gt;
+        &lt;dependencies&gt;
+            &lt;dependency&gt;
+                &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;
+                &lt;version&gt;Greenwich.SR1&lt;/version&gt;
+                &lt;type&gt;pom&lt;/type&gt;
+                &lt;scope&gt;import&lt;/scope&gt;
+            &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+    &lt;/dependencyManagement&gt;
+&lt;/project&gt;</code></pre>
+<p>删除src文件夹</p>
+<h4 id="3-3-2-其他公共模块搭建"><a href="#3-3-2-其他公共模块搭建" class="headerlink" title="3.3.2 其他公共模块搭建"></a>3.3.2 其他公共模块搭建</h4><p>创建changgou-gateway、changgou-service、changgou-service-api、changgou-web工程，工程全部为pom工程，并将所有工程的src文件删除。</p>
+<p>pom.xml中打pom包</p>
+<pre><code class="xml">&lt;packaging&gt;pom&lt;/packaging&gt;</code></pre>
+<p>项目结构如下：</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1564024579642.png" alt="1564024579642"></p>
+<h3 id="3-4-Eureka微服务搭建"><a href="#3-4-Eureka微服务搭建" class="headerlink" title="3.4 Eureka微服务搭建"></a>3.4 Eureka微服务搭建</h3><h4 id="3-4-1-pom-xml依赖"><a href="#3-4-1-pom-xml依赖" class="headerlink" title="3.4.1 pom.xml依赖"></a>3.4.1 pom.xml依赖</h4><p>创建模块changgou-eureka ，pom.xml引入依赖 </p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;changgou_parent&lt;/artifactId&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;artifactId&gt;changgou_eureka&lt;/artifactId&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<h4 id="3-4-2-appliation-yml配置"><a href="#3-4-2-appliation-yml配置" class="headerlink" title="3.4.2 appliation.yml配置"></a>3.4.2 appliation.yml配置</h4><p>创建配置文件application.yml</p>
+<pre><code class="yaml">server:
+  port: 7001
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: false   #是否将自己注册到eureka中
+    fetch-registry: false         #是否从eureka中获取信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/</code></pre>
+<h4 id="3-4-3-启动类配置"><a href="#3-4-3-启动类配置" class="headerlink" title="3.4.3 启动类配置"></a>3.4.3 启动类配置</h4><p>创建包com.changgou  包下创建启动类EurekaApplication，代码如下：</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560411732580.png" alt="1560411732580"></p>
+<p>上图代码如下：</p>
+<pre><code class="Java">@SpringBootApplication
+@EnableEurekaServer
+public class EurekaApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaApplication.class);
+    }
+}</code></pre>
+<p>测试访问<code>http://localhost:7001/</code>,效果如下：</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560412105435.png" alt="1560412105435"></p>
+<h3 id="3-5-公共模块搭建"><a href="#3-5-公共模块搭建" class="headerlink" title="3.5 公共模块搭建"></a>3.5 公共模块搭建</h3><h4 id="3-5-1-pom-xml依赖"><a href="#3-5-1-pom-xml依赖" class="headerlink" title="3.5.1 pom.xml依赖"></a>3.5.1 pom.xml依赖</h4><p>创建公共子模块changgou-common，pom.xml引入依赖</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;changgou-parent&lt;/artifactId&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;artifactId&gt;changgou-common&lt;/artifactId&gt;
+
+    &lt;dependencies&gt;
+        &lt;!--web起步依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!-- redis 使用--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--eureka-client--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--openfeign--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--微信支付--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.github.wxpay&lt;/groupId&gt;
+            &lt;artifactId&gt;wxpay-sdk&lt;/artifactId&gt;
+            &lt;version&gt;0.0.3&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!--httpclient支持--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+            &lt;artifactId&gt;httpclient&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<p>公共子模块引入这些依赖后，其他微服务引入changgou-common后也自动引入了这些依赖</p>
+<h4 id="3-5-2-常用对象"><a href="#3-5-2-常用对象" class="headerlink" title="3.5.2 常用对象"></a>3.5.2 常用对象</h4><p>创建entity包 ，在entity包下创建返回状态码实体类==[StatusCode]==</p>
+<pre><code class="java">/**
+ * 返回码
+ */
+public class StatusCode {
+    public static final int OK = 20000;//成功
+    public static final int ERROR = 20001;//失败
+    public static final int LOGINERROR = 20002;//用户名或密码错误
+    public static final int ACCESSERROR = 20003;//权限不足
+    public static final int REMOTEERROR = 20004;//远程调用失败
+    public static final int REPERROR = 20005;//重复操作
+    public static final int NOTFOUNDERROR = 20006;//没有对应的抢购数据
+}</code></pre>
+<p>包下建立类==Result==用于微服务返回结果给前端</p>
+<pre><code class="java">/**
+ * 返回结果实体类
+ */
+public class Result&lt;T&gt; {
+    private boolean flag;//是否成功
+    private Integer code;//返回码
+    private String message;//返回消息
+    private T data;//返回数据
+
+    public Result(boolean flag, Integer code, String message, Object data) {
+        this.flag = flag;
+        this.code = code;
+        this.message = message;
+        this.data = (T) data;
+    }
+
+    public Result(boolean flag, Integer code, String message) {
+        this.flag = flag;
+        this.code = code;
+        this.message = message;
+    }
+
+    public Result() {
+        this.flag = true;
+        this.code = StatusCode.OK;
+        this.message = &quot;操作成功!&quot;;
+    }
+
+    // getter and setter.....
+}</code></pre>
+<p>在entity包下建立类用于承载分页的数据结果</p>
+<pre><code class="java">/**
+ * 分页结果类
+ */
+public class PageResult&lt;T&gt; {
+
+    private Long total;//总记录数
+    private List&lt;T&gt; rows;//记录
+
+    public PageResult(Long total, List&lt;T&gt; rows) {
+        this.total = total;
+        this.rows = rows;
+    }
+
+    public PageResult() {
+    }
+
+    //getter and setter ......
+}</code></pre>
+<p>当然，我们还可以将其他工具类都一起倒入到工程中，以后会用到，将<code>资料\工具类</code>中的所有类直接导入到entity包下。</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1564023015741.png" alt="1564023015741"></p>
+<h3 id="3-6-数据访问工程搭建"><a href="#3-6-数据访问工程搭建" class="headerlink" title="3.6 数据访问工程搭建"></a>3.6 数据访问工程搭建</h3><p>创建公共模块changgou-common-db ，pom文件引入依赖</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;changgou-parent&lt;/artifactId&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;artifactId&gt;changgou-common-db&lt;/artifactId&gt;
+
+    &lt;!--依赖--&gt;
+    &lt;dependencies&gt;
+        &lt;!--对changgou-common的依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+            &lt;artifactId&gt;changgou-common&lt;/artifactId&gt;
+            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!--通用mapper起步依赖--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;
+            &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;2.0.4&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!--MySQL数据库驱动--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--mybatis分页插件--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;
+            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;1.2.3&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<p>这个公共模块是连接mysql数据库的公共微服务模块，所以需要连接mysql的微服务都继承自此工程。</p>
+<h3 id="3-7-商品微服务搭建"><a href="#3-7-商品微服务搭建" class="headerlink" title="3.7 商品微服务搭建"></a>3.7 商品微服务搭建</h3><p>商品微服务主要是实现对商品的增删改查相关操作，以及商品相关信息的增删改查。</p>
+<h4 id="3-7-1-公共组件工程搭建"><a href="#3-7-1-公共组件工程搭建" class="headerlink" title="==3.7.1 公共组件工程搭建=="></a>==3.7.1 公共组件工程搭建==</h4><p>创建changgou-service-api子模块changgou-service-goods-api，并将<code>资料\javabean\changgou-service-goods-api</code>中的Pojo导入到工程中。</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560416099767.png" alt="1560416099767"></p>
+<p>修改父工程changgou-service-api的pom.xml，添加<code>persistence-api</code>和<code>changgou-common</code>的依赖，代码如下：</p>
+<pre><code class="xml">&lt;dependencies&gt;
+    &lt;!--通用的common--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;artifactId&gt;changgou-common&lt;/artifactId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!--每个工程都有Pojo，都需要用到该包对应的注解--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;javax.persistence&lt;/groupId&gt;
+        &lt;artifactId&gt;persistence-api&lt;/artifactId&gt;
+        &lt;version&gt;1.0&lt;/version&gt;
+        &lt;scope&gt;compile&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+<h4 id="3-7-2-微服务工程搭建"><a href="#3-7-2-微服务工程搭建" class="headerlink" title="3.7.2 微服务工程搭建"></a>3.7.2 微服务工程搭建</h4><p>修改changgou-service的pom.xml引入<code>changgou-common-db</code>的依赖，代码如下：</p>
+<pre><code class="xml">&lt;!--依赖--&gt;
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;artifactId&gt;changgou-common-db&lt;/artifactId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+<p>在changgou-service中创建changgou-service-goods ，pom.xml引入依赖 </p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;artifactId&gt;changgou-service&lt;/artifactId&gt;
+        &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;artifactId&gt;changgou-service-goods&lt;/artifactId&gt;
+
+    &lt;!--依赖--&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.changgou&lt;/groupId&gt;
+            &lt;artifactId&gt;changgou-service-goods-api&lt;/artifactId&gt;
+            &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<p>在resources下创建配置文件application.yml</p>
+<pre><code class="yaml">server:
+  port: 18081
+spring:
+  application:
+    name: goods
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/changgou_goods?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.changgou.goods.pojo</code></pre>
+<p>在包com.changgou.goods 包下创建启动类GoodsApplication，代码如下：</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560416869439.png" alt="1560416869439"></p>
+<p>上图代码如下：</p>
+<pre><code class="JAVA">@SpringBootApplication
+@EnableEurekaClient
+@MapperScan(basePackages = {&quot;com.changgou.goods.dao&quot;})
+public class GoodsApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(GoodsApplication.class);
+    }
+}</code></pre>
+<p><strong><em>注意</em></strong> ：@MapperScan是<code>tk.mybatis.spring.annotation</code>包下的，用于扫描==Mapper==接口</p>
+<p>启动<code>changgou-service-goods</code> 再访问<code>&lt;http://localhost:7001/&gt;</code>效果如下：</p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1564037101313.png" alt="1564037101313"></p>
+<h2 id="4-商品微服务-品牌增删改查"><a href="#4-商品微服务-品牌增删改查" class="headerlink" title="==4 商品微服务-品牌增删改查=="></a>==4 商品微服务-品牌增删改查==</h2><h3 id="4-1-需求分析"><a href="#4-1-需求分析" class="headerlink" title="4.1 需求分析"></a>4.1 需求分析</h3><p>创建商品微服务，实现对品牌表的增删改查功能。具体包括</p>
+<p>（1）查询全部列表数据</p>
+<p>（2）根据ID查询实体数据</p>
+<p>（3）增加</p>
+<p>（4）修改</p>
+<p>（5）删除</p>
+<p>（6）条件查询</p>
+<p>（7）分页查询</p>
+<p>（8）分页+条件查询</p>
+<p>（9）公共异常处理</p>
+<h3 id="4-2-表结构分析"><a href="#4-2-表结构分析" class="headerlink" title="4.2 表结构分析"></a>4.2 表结构分析</h3><p>品牌表：tb_brand</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>字段含义</th>
+<th>字段类型</th>
+<th>字段长度</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>品牌id</td>
+<td>INT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>品牌名称</td>
+<td>VARCHAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>image</td>
+<td>品牌图片地址</td>
+<td>VARCHAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>letter</td>
+<td>品牌的首字母</td>
+<td>CHAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>seq</td>
+<td>排序</td>
+<td>INT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="4-3-代码实现"><a href="#4-3-代码实现" class="headerlink" title="4.3 代码实现"></a>4.3 代码实现</h3><p>上面品牌表对应Brand实体类</p>
+<pre><code class="java">@Table(name=&quot;tb_brand&quot;)
+public class Brand implements Serializable{
+    @Id
+    private Integer id;//品牌id
+    private String name;//品牌名称
+    private String image;//品牌图片地址
+    private String letter;//品牌的首字母
+    private Integer seq;//排序
+
+    // getter and setter  .....(省略)
+}</code></pre>
+<p>@Table和@Id都是JPA注解，@Table用于配置表与实体类的映射关系，@Id用于标识主键属性。</p>
+<h4 id="4-3-1-品牌列表"><a href="#4-3-1-品牌列表" class="headerlink" title="4.3.1 品牌列表"></a>4.3.1 品牌列表</h4><p>(1)Dao创建</p>
+<p>在changgou-service-goods微服务下创建com.changgou.goods.dao.BrandMapper接口，代码如下：</p>
+<pre><code class="java">public interface BrandMapper extends Mapper&lt;Brand&gt; {
+}</code></pre>
+<p>继承了Mapper接口，就自动实现了增删改查的常用方法。</p>
+<p>(2)业务层</p>
+<p>创建com.changgou.goods.service.BrandService接口，代码如下：</p>
+<pre><code class="java">public interface BrandService {
+
+    /***
+     * 查询所有品牌
+     * @return
+     */
+    List&lt;Brand&gt; findAll();
+}</code></pre>
+<p>创建com.changgou.goods.service.impl.BrandServiceImpl实现类，代码如下：</p>
+<pre><code class="java">@Service
+public class BrandServiceImpl {
+
+    @Autowired
+    private BrandMapper brandMapper;
+
+    /**
+     * 全部数据
+     * @return
+     */
+    public List&lt;Brand&gt; findAll(){
+        return brandMapper.selectAll();
+    }
+}</code></pre>
+<p>(3)控制层</p>
+<p>控制层  com.changgou.goods包下创建controller包  ，包下创建类</p>
+<pre><code class="java">@RestController
+@RequestMapping(&quot;/brand&quot;)
+public class BrandController {
+
+    @Autowired
+    private BrandService brandService;
+
+    /***
+     * 查询全部数据
+     * @return
+     */
+    @GetMapping
+    public Result&lt;Brand&gt; findAll(){
+        List&lt;Brand&gt; brandList = brandService.findAll();
+        return new Result&lt;Brand&gt;(true, StatusCode.OK,&quot;查询成功&quot;,brandList) ;
+    }
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand" target="_blank" rel="noopener">http://localhost:18081/brand</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560443629855.png" alt="1560443629855"></p>
+<h4 id="4-3-2-根据ID查询品牌"><a href="#4-3-2-根据ID查询品牌" class="headerlink" title="4.3.2 根据ID查询品牌"></a>4.3.2 根据ID查询品牌</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService接口，添加根据ID查询品牌数据方法，代码如下：</p>
+<pre><code class="java">/**
+ * 根据ID查询
+ * @param id
+ * @return
+ */
+Brand findById(Integer id);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl新增方法，代码如下：</p>
+<pre><code class="java">/**
+ * 根据ID查询
+ * @param id
+ * @return
+ */
+@Override
+public Brand findById(Integer id){
+    return  brandMapper.selectByPrimaryKey(id);
+}</code></pre>
+<p>(2)控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 根据ID查询品牌数据
+ * @param id
+ * @return
+ */
+@GetMapping(&quot;/{id}&quot;)
+public Result&lt;Brand&gt; findById(@PathVariable Integer id){
+    //根据ID查询
+    Brand brand = brandService.findById(id);
+    return new Result&lt;Brand&gt;(true,StatusCode.OK,&quot;查询成功&quot;,brand);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/14026" target="_blank" rel="noopener">http://localhost:18081/brand/14026</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560443736710.png" alt="1560443736710"></p>
+<h4 id="4-3-3-新增品牌"><a href="#4-3-3-新增品牌" class="headerlink" title="4.3.3 新增品牌"></a>4.3.3 新增品牌</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService，新增方法</p>
+<pre><code class="java">/***
+ * 新增品牌
+ * @param brand
+ */
+void add(Brand brand);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl，新增增加品牌方法代码如下：</p>
+<pre><code class="java">/**
+ * 增加
+ * @param brand
+ */
+@Override
+public void add(Brand brand){
+    brandMapper.insert(brand);
+}</code></pre>
+<p>(2) 控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 新增品牌数据
+ * @param brand
+ * @return
+ */
+@PostMapping
+public Result add(@RequestBody Brand brand){
+    brandService.add(brand);
+    return new Result(true,StatusCode.OK,&quot;添加成功&quot;);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand" target="_blank" rel="noopener">http://localhost:18081/brand</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560443988970.png" alt="1560443988970"></p>
+<h4 id="4-3-4-修改品牌"><a href="#4-3-4-修改品牌" class="headerlink" title="4.3.4 修改品牌"></a>4.3.4 修改品牌</h4><p>(1)业务层</p>
+<p>需改com.changgou.goods.service.BrandService,添加修改品牌方法，代码如下：</p>
+<pre><code class="java">/***
+ * 修改品牌数据
+ * @param brand
+ */
+void update(Brand brand);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl，添加修改品牌方法，代码如下：</p>
+<pre><code class="java">/**
+ * 修改
+ * @param brand
+ */
+@Override
+public void update(Brand brand){
+    brandMapper.updateByPrimaryKey(brand);
+}</code></pre>
+<p>(2)控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 修改品牌数据
+ * @param brand
+ * @param id
+ * @return
+ */
+@PutMapping(value=&quot;/{id}&quot;)
+public Result update(@RequestBody Brand brand,@PathVariable Integer id){
+    //设置ID
+    brand.setId(id);
+    //修改数据
+    brandService.update(brand);
+    return new Result(true,StatusCode.OK,&quot;修改成功&quot;);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/325415" target="_blank" rel="noopener">http://localhost:18081/brand/325415</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560444209790.png" alt="1560444209790"></p>
+<h4 id="4-3-5-删除品牌"><a href="#4-3-5-删除品牌" class="headerlink" title="4.3.5 删除品牌"></a>4.3.5 删除品牌</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService，添加删除品牌方法，代码如下：</p>
+<pre><code class="java">/***
+ * 删除品牌
+ * @param id
+ */
+void delete(Integer id);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl，新增删除品牌方法，代码如下：</p>
+<pre><code class="java">/**
+ * 删除
+ * @param id
+ */
+@Override
+public void delete(Integer id){
+    brandMapper.deleteByPrimaryKey(id);
+}</code></pre>
+<p>(2)控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 根据ID删除品牌数据
+ * @param id
+ * @return
+ */
+@DeleteMapping(value = &quot;/{id}&quot; )
+public Result delete(@PathVariable Integer id){
+    brandService.delete(id);
+    return new Result(true,StatusCode.OK,&quot;删除成功&quot;);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/325415" target="_blank" rel="noopener">http://localhost:18081/brand/325415</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560444351992.png" alt="1560444351992"></p>
+<h4 id="4-3-6-品牌列表条件查询"><a href="#4-3-6-品牌列表条件查询" class="headerlink" title="4.3.6 品牌列表条件查询"></a>4.3.6 品牌列表条件查询</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService，增加根据条件搜索品牌方法，代码如下：</p>
+<pre><code class="java">/***
+ * 多条件搜索品牌方法
+ * @param brand
+ * @return
+ */
+List&lt;Brand&gt; findList(Brand brand);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl，添加根据多条件搜索品牌方法的实现，代码如下：</p>
+<pre><code class="java">/**
+ * 条件查询
+ * @param brand
+ * @return
+ */
+@Override
+public List&lt;Brand&gt; findList(Brand brand){
+    //构建查询条件
+    Example example = createExample(brand);
+    //根据构建的条件查询数据
+    return brandMapper.selectByExample(example);
+}
+
+
+/**
+ * 构建查询对象
+ * @param brand
+ * @return
+ */
+public Example createExample(Brand brand){
+    Example example=new Example(Brand.class);
+    Example.Criteria criteria = example.createCriteria();
+    if(brand!=null){
+        // 品牌名称
+        if(!StringUtils.isEmpty(brand.getName())){
+            criteria.andLike(&quot;name&quot;,&quot;%&quot;+brand.getName()+&quot;%&quot;);
+        }
+        // 品牌图片地址
+        if(!StringUtils.isEmpty(brand.getImage())){
+            criteria.andLike(&quot;image&quot;,&quot;%&quot;+brand.getImage()+&quot;%&quot;);
+        }
+        // 品牌的首字母
+        if(!StringUtils.isEmpty(brand.getLetter())){
+            criteria.andLike(&quot;letter&quot;,&quot;%&quot;+brand.getLetter()+&quot;%&quot;);
+        }
+        // 品牌id
+        if(!StringUtils.isEmpty(brand.getLetter())){
+            criteria.andEqualTo(&quot;id&quot;,brand.getId());
+        }
+        // 排序
+        if(!StringUtils.isEmpty(brand.getSeq())){
+            criteria.andEqualTo(&quot;seq&quot;,brand.getSeq());
+        }
+    }
+    return example;
+}</code></pre>
+<p>(2) 控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 多条件搜索品牌数据
+ * @param brand
+ * @return
+ */
+@PostMapping(value = &quot;/search&quot; )
+public Result&lt;List&lt;Brand&gt;&gt; findList(@RequestBody(required = false) Brand brand){
+    List&lt;Brand&gt; list = brandService.findList(brand);
+    return new Result&lt;List&lt;Brand&gt;&gt;(true,StatusCode.OK,&quot;查询成功&quot;,list);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/search" target="_blank" rel="noopener">http://localhost:18081/brand/search</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560445027032.png" alt="1560445027032"></p>
+<h4 id="4-3-7-品牌列表分页查询"><a href="#4-3-7-品牌列表分页查询" class="headerlink" title="4.3.7 品牌列表分页查询"></a>4.3.7 品牌列表分页查询</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService添加分页方法，代码如下：</p>
+<pre><code class="java">/***
+ * 分页查询
+ * @param page
+ * @param size
+ * @return
+ */
+PageInfo&lt;Brand&gt; findPage(int page, int size);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl添加分页方法实现，代码如下：</p>
+<pre><code class="java">/**
+ * 分页查询
+ * @param page
+ * @param size
+ * @return
+ */
+@Override
+public PageInfo&lt;Brand&gt; findPage(int page, int size){
+    //静态分页
+    PageHelper.startPage(page,size);
+    //分页查询
+    return new PageInfo&lt;Brand&gt;(brandMapper.selectAll());
+}</code></pre>
+<p>(2)控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 分页搜索实现
+ * @param page:当前页
+ * @param size:每页显示多少条
+ * @return
+ */
+@GetMapping(value = &quot;/search/{page}/{size}&quot; )
+public Result&lt;PageInfo&gt; findPage(@PathVariable  int page, @PathVariable  int size){
+    //分页查询
+    PageInfo&lt;Brand&gt; pageInfo = brandService.findPage(page, size);
+    return new Result&lt;PageInfo&gt;(true,StatusCode.OK,&quot;查询成功&quot;,pageInfo);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/search/1/3" target="_blank" rel="noopener">http://localhost:18081/brand/search/1/3</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560446429340.png" alt="1560446429340"></p>
+<h4 id="4-3-8-品牌列表条件-分页查询"><a href="#4-3-8-品牌列表条件-分页查询" class="headerlink" title="4.3.8 品牌列表条件+分页查询"></a>4.3.8 品牌列表条件+分页查询</h4><p>(1)业务层</p>
+<p>修改com.changgou.goods.service.BrandService，增加多条件分页查询方法，代码如下：</p>
+<pre><code class="java">/***
+ * 多条件分页查询
+ * @param brand
+ * @param page
+ * @param size
+ * @return
+ */
+PageInfo&lt;Brand&gt; findPage(Brand brand, int page, int size);</code></pre>
+<p>修改com.changgou.goods.service.impl.BrandServiceImpl，添加多条件分页查询方法代码如下：</p>
+<pre><code class="java">/**
+ * 条件+分页查询
+ * @param brand 查询条件
+ * @param page 页码
+ * @param size 页大小
+ * @return 分页结果
+ */
+@Override
+public PageInfo&lt;Brand&gt; findPage(Brand brand, int page, int size){
+    //分页
+    PageHelper.startPage(page,size);
+    //搜索条件构建
+    Example example = createExample(brand);
+    //执行搜索
+    return new PageInfo&lt;Brand&gt;(brandMapper.selectByExample(example));
+}</code></pre>
+<p>(2)控制层</p>
+<p>BrandController新增方法</p>
+<pre><code class="java">/***
+ * 分页搜索实现
+ * @param brand
+ * @param page
+ * @param size
+ * @return
+ */
+@PostMapping(value = &quot;/search/{page}/{size}&quot; )
+public Result&lt;PageInfo&gt; findPage(@RequestBody(required = false) Brand brand, @PathVariable  int page, @PathVariable  int size){
+    //执行搜索
+    PageInfo&lt;Brand&gt; pageInfo = brandService.findPage(brand, page, size);
+    return new Result(true,StatusCode.OK,&quot;查询成功&quot;,pageInfo);
+}</code></pre>
+<p>测试：<a href="http://localhost:18081/brand/search/1/3" target="_blank" rel="noopener">http://localhost:18081/brand/search/1/3</a></p>
+<p><img src="F:/%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%96%99/image/1560446545220.png" alt="1560446545220"></p>
+<h4 id="4-3-9-公共异常处理"><a href="#4-3-9-公共异常处理" class="headerlink" title="4.3.9 公共异常处理"></a>4.3.9 公共异常处理</h4><p>为了使我们的代码更容易维护，我们创建一个类集中处理异常,该异常类可以创建在changgou-common工程中，创建com.changgou.framework.exception.BaseExceptionHandler，代码如下：</p>
+<pre><code class="java">@ControllerAdvice
+public class BaseExceptionHandler {
+
+    /***
+     * 异常处理
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public Result error(Exception e) {
+        e.printStackTrace();
+        return new Result(false, StatusCode.ERROR, e.getMessage());
+    }
+}</code></pre>
+<p>注意：@ControllerAdvice注解，全局捕获异常类，只要作用在@RequestMapping上，所有的异常都会被捕获。</p>
+<h4 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h4><p>经过四个小时的学习环境已经搭建起来，实现了品牌的增删改查功能，收获了：解了微服务项目，知道了Eureka,但是具体是什么还不是太了解，也了解了前后分离的开发模式纯数据交换式的体验。嗯，顶不住了，三点到现在6个小时了</p>
+<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200412/b0VebN099Mp1.png?imageslim" alt="mark"></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://dablog.club" rel="external nofollow noreferrer">戴澳</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://dablog.club/2020/04/12/shangcheng/">https://dablog.club/2020/04/12/shangcheng/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://dablog.club" target="_blank">戴澳</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                    <span class="chip bg-color">微服务</span>
+                                </a>
+                            
+                                <a href="/tags/springboot/">
+                                    <span class="chip bg-color">springboot</span>
+                                </a>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80OTE4OC8yNTY4Mg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/12/shangcheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="黑马商城环境搭建">
+                        
+                        <span class="card-title">黑马商城环境搭建</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            商城项目
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
+                    
+                    <a href="/tags/springboot/">
+                        <span class="chip bg-color">springboot</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/09/mavenaz/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Maven的下载，安装，与配置整合idea">
+                        
+                        <span class="card-title">Maven的下载，安装，与配置整合idea</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            maven的安装与配置
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/maven/">
+                        <span class="chip bg-color">maven</span>
+                    </a>
+                    
+                    <a href="/tags/idea/">
+                        <span class="chip bg-color">idea</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://dablog.club" target="_blank">戴澳</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">10.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "3";
+                    var startDate = "15";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://www.beian.miit.gov.cn" target="_blank">湘ICP备20005839</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/daiaozzh/daiaozzh.github.io.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2476348804@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2476348804" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2476348804" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/5752014136/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/5752014136/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
