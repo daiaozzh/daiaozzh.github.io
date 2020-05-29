@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>mysql</title>
+      <link href="/2020/05/29/mysql/"/>
+      <url>/2020/05/29/mysql/</url>
+      
+        <content type="html"><![CDATA[<h3 id="连接远程数据库报错整理"><a href="#连接远程数据库报错整理" class="headerlink" title="连接远程数据库报错整理"></a>连接远程数据库报错整理</h3><p>很久没有写博客了，大概停了一个月，自从上班以来，貌似忘记了，自己还有博客</p><p>描述一下最近遇到连接服务器遇到的坑</p><h5 id="一-2003错误"><a href="#一-2003错误" class="headerlink" title="一 2003错误"></a>一 2003错误</h5><p><img src="https://img-blog.csdn.net/20180501173939247?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dhZ2V3YW5nMQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="mark"></p><p>可能造成出现的原因：<br>1.网络不通畅<br>2.mysql 服务未启动<br>3.防火墙未开放端口</p><p>解决办法：</p><p>1.重启服务器mysql服务</p><p>2.去服务器安全策略组打开3306端口</p><h4 id="二-1045错误"><a href="#二-1045错误" class="headerlink" title="二 1045错误"></a>二 1045错误</h4><p><img src="https://img-blog.csdn.net/20180702154253475?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x6Zl9obGg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="mark"></p><p>用户“root”@本地主机的访问被拒绝</p><p>服务器数据库拒绝访问</p><p>解决办法：</p><p>打开宝塔找到Mysql服务，修改配置文件</p><p>打开后，找到mysqld这个位置，添加skip-grant-tables这一句，重启，搞定</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 踩坑 </tag>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JAVA 分布式 - 分布式介绍</title>
       <link href="/2020/04/13/fenbushi/"/>
       <url>/2020/04/13/fenbushi/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 分布式 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       

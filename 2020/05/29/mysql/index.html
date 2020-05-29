@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="FastDFS, 岱玹">
+    <meta name="keywords" content="mysql, 岱玹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>FastDFS | 岱玹</title>
+    <title>mysql | 岱玹</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">FastDFS</h1>
+                    <h1 class="description center-align post-title">mysql</h1>
                 </div>
             </div>
         </div>
@@ -384,12 +384,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/FastDFS/">
-                                <span class="chip bg-color">FastDFS</span>
+                            <a href="/tags/%E8%B8%A9%E5%9D%91/">
+                                <span class="chip bg-color">踩坑</span>
                             </a>
                         
-                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                                <span class="chip bg-color">分布式</span>
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
                             </a>
                         
                     </div>
@@ -413,28 +413,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-05-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-05-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    191
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -450,41 +450,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="FastDFS"><a href="#FastDFS" class="headerlink" title="FastDFS"></a>FastDFS</h2><p>部分资料转载<a href="https://www.jianshu.com/p/b7c330a87855" target="_blank" rel="noopener">https://www.jianshu.com/p/b7c330a87855</a></p>
-<p>FastDFS是一个开源的轻量级<a href="https://baike.so.com/doc/6591749-6805528.html" target="_blank" rel="noopener">分布式文件系统</a>，它对文件进行管理，功能包括:文件存储、文件同步、文件访问(文件上传、文件下载)等，解决了大容量存储和负载均衡的问题。特别适合以文件为载体的在线服务，如相册网站、视频网站等等。</p>
-<p>FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务</p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>FastDFS服务端有两个角色:跟踪器(tracker)和存储<a href="https://baike.so.com/doc/5159597-5389889.html" target="_blank" rel="noopener">节点</a>(storage)。跟踪器主要做调度工作，在访问上起负载均衡的作用。</p>
-<p>存储节点存储文件，完成文件管理的所有功能:就是这样的存储、同步和提供存取接口，FastDFS同时对文件的metadata进行管理。所谓文件的meta data就是文件的相关属性，以键值对(key value)方式表示，如:width=1024，其中的key为width，value为1024。文件metadata是<a href="https://baike.so.com/doc/435261-460869.html" target="_blank" rel="noopener">文件属性</a>列表，可以包含多个键值对。</p>
-<p>跟踪器和存储节点都可以由一台或多台服务器构成。跟踪器和存储节点中的服务器均可以随时增加或下线而不会影响线上服务。其中跟踪器中的所有服务器都是对等的，可以根据服务器的压力情况随时增加或减少。</p>
-<p>为了支持大容量，存储<a href="https://baike.so.com/doc/5159597-5389889.html" target="_blank" rel="noopener">节点</a>(服务器)采用了分卷(或分组)的组织方式。<a href="https://baike.so.com/doc/6261634-6475054.html" target="_blank" rel="noopener">存储系统</a>由一个或多个卷组成，卷与卷之间的文件是相互独立的，所有卷的文件容量累加就是整个存储系统中的文件容量。一个卷可以由一台或多台<a href="https://baike.so.com/doc/1931476-2043399.html" target="_blank" rel="noopener">存储服务器</a>组成，一个卷下的存储服务器中的文件都是相同的，卷中的多台存储服务器起到了<a href="https://baike.so.com/doc/8616462-8937444.html" target="_blank" rel="noopener">冗余备份</a>和负载均衡的作用。</p>
-<p>在卷中增加服务器时，同步已有的文件由系统自动完成，同步完成后，系统自动将新增服务器切换到线上提供服务。</p>
-<p>当存储空间不足或即将耗尽时，可以动态添加卷。只需要增加一台或多台服务器，并将它们配置为一个新的卷，这样就扩大了<a href="https://baike.so.com/doc/6261634-6475054.html" target="_blank" rel="noopener">存储系统</a>的容量。</p>
-<p>FastDFS中的文件标识分为两个部分:卷名和文件名，二者缺一不可。</p>
-<h4 id="客户端Client"><a href="#客户端Client" class="headerlink" title="客户端Client"></a>客户端Client</h4><p>主要是上传下载数据的服务器，也就是我们自己的项目所部署在的服务器。每个客户端服务器都需要安装Nginx</p>
-<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200413/kWjeIUWXLRso.png?imageslim" alt="fastDFS三方交互图"></p>
-<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><h4 id="1写入操作"><a href="#1写入操作" class="headerlink" title="1写入操作"></a>1写入操作</h4><p>写操作的时候，storage会将他所挂载的所有数据存储目录的底下都创建2级子目录，每一级256个总共65536个，新写的文件会以hash的方式被路由到其中某个子目录下，然后将文件数据作为本地文件存储到该目录中。</p>
-<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200413/eJbBtUIPrP3B.png?imageslim" alt="写操作fastDFS流程图"></p>
-<h4 id="2-写入数据"><a href="#2-写入数据" class="headerlink" title="2.写入数据"></a>2.写入数据</h4><p>写操作的时候，storage会将他所挂载的所有数据存储目录的底下都创建2级子目录，每一级256个总共65536个，新写的文件会以hash的方式被路由到其中某个子目录下，然后将文件数据作为本地文件存储到该目录中。</p>
-<p><img src="http://q81vzntp5.bkt.clouddn.com/blog/20200413/OvxkH9NPb1eQ.png?imageslim" alt="写操作fastDFS流程图"></p>
-<h4 id="FastDFS搭建"><a href="#FastDFS搭建" class="headerlink" title="FastDFS搭建"></a>FastDFS搭建</h4><p>(以最近做的商城为例子)</p>
-<p>我们使用Docker搭建FastDFS的开发环境</p>
-<p>拉取镜像 </p>
-<pre><code class="java">docker pull morunchang/fastdfs</code></pre>
-<p>运行tracker </p>
-<pre><code class="java">docker run ‐d ‐‐name tracker ‐‐net=host morunchang/fastdfs sh tracker.sh</code></pre>
-<p>运行storage </p>
-<pre><code class="java">docker run ‐d ‐‐name storage ‐‐net=host ‐e TRACKER_IP=&lt;your tracker server address&gt;:22122 ‐e GROUP_NAME=&lt;group name&gt; morunchang/fastdfs sh storage.sh</code></pre>
-<p>使用的网络模式是–net=host, 替换为你机器的Ip即可 </p>
-<p>是组名，即storage的组 </p>
-<p>如果想要增加新的storage服务器，再次运行该命令，注意更换 新组名</p>
-<p>修改nginx的配置</p>
-<p>进入storage的容器内部，修改nginx.conf</p>
-<pre><code class="java">docker exec ‐it storage /bin/bash</code></pre>
-<p>进入后</p>
-<pre><code class="java">vi /data/nginx/conf/nginx.conf</code></pre>
-<p>添加以下内容 </p>
-<pre><code class="java">location /group1/M00 { proxy_next_upstream http_502 http_504 error timeout invalid_header; proxy_cache http‐cache; proxy_cache_valid 200 304 12h; proxy_cache_key $uri$is_args$args; proxy_pass http://fdfs_group1; expires 30d; }</code></pre>
-<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>通过做项目了解了这个FastDFS分布式开源框架，也逐渐了解到了分布式的作用，有了一个简单的认识，也是迈上高层次的程序员的一步，但是仅仅只是走出了一小步还需要不断的学习；</p>
+                <h3 id="连接远程数据库报错整理"><a href="#连接远程数据库报错整理" class="headerlink" title="连接远程数据库报错整理"></a>连接远程数据库报错整理</h3><p>很久没有写博客了，大概停了一个月，自从上班以来，貌似忘记了，自己还有博客</p>
+<p>描述一下最近遇到连接服务器遇到的坑</p>
+<h5 id="一-2003错误"><a href="#一-2003错误" class="headerlink" title="一 2003错误"></a>一 2003错误</h5><p><img src="https://img-blog.csdn.net/20180501173939247?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dhZ2V3YW5nMQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="mark"></p>
+<p>可能造成出现的原因：<br>1.网络不通畅<br>2.mysql 服务未启动<br>3.防火墙未开放端口</p>
+<p>解决办法：</p>
+<p>1.重启服务器mysql服务</p>
+<p>2.去服务器安全策略组打开3306端口</p>
+<h4 id="二-1045错误"><a href="#二-1045错误" class="headerlink" title="二 1045错误"></a>二 1045错误</h4><p><img src="https://img-blog.csdn.net/20180702154253475?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x6Zl9obGg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="mark"></p>
+<p>用户“root”@本地主机的访问被拒绝</p>
+<p>服务器数据库拒绝访问</p>
+<p>解决办法：</p>
+<p>打开宝塔找到Mysql服务，修改配置文件</p>
+<p>打开后，找到mysqld这个位置，添加skip-grant-tables这一句，重启，搞定</p>
 
             </div>
             <hr/>
@@ -510,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.dablog.club/2020/04/13/fastdfs/">https://www.dablog.club/2020/04/13/fastdfs/</a>
+                    <a href="https://www.dablog.club/2020/05/29/mysql/">https://www.dablog.club/2020/05/29/mysql/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,12 +526,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/FastDFS/">
-                                    <span class="chip bg-color">FastDFS</span>
+                                <a href="/tags/%E8%B8%A9%E5%9D%91/">
+                                    <span class="chip bg-color">踩坑</span>
                                 </a>
                             
-                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                                    <span class="chip bg-color">分布式</span>
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
                                 </a>
                             
                         </div>
@@ -741,9 +719,64 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/05/29/mysql/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="mysql">
+                        
+                        <span class="card-title">mysql</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            mysql踩坑
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%B8%A9%E5%9D%91/">
+                        <span class="chip bg-color">踩坑</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/04/13/fenbushi/">
                     <div class="card-image">
@@ -761,9 +794,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -785,63 +818,6 @@
                     
                     <a href="/tags/java/">
                         <span class="chip bg-color">java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/12/shangcheng/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/daiaozzh/daiaozzh.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="黑马商城环境搭建">
-                        
-                        <span class="card-title">黑马商城环境搭建</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            商城项目
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
-                        <span class="chip bg-color">微服务</span>
-                    </a>
-                    
-                    <a href="/tags/springboot/">
-                        <span class="chip bg-color">springboot</span>
                     </a>
                     
                 </div>
